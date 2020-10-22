@@ -1,0 +1,3 @@
+include ':SwipeToDelete'
+include ':app'
+rootProject.name = "CustomSwipeLibrary"
