@@ -33,7 +33,7 @@ class Adapter(
 
         fun bind(string: String) {
             textView.text = string
-            textView.setGestures()
+      //      textView.setGestures()
 //            gestureDetector = GestureDetector(itemView.context, this)
 //            itemView.setOnTouchListener(this)
         }

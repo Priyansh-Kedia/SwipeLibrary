@@ -71,6 +71,7 @@ object CustomSwipesObject : View.OnTouchListener, GestureDetector.OnGestureListe
 
             override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
                 holder = viewHolder
+                holder.itemView.setGestures()
                 val drags =
                     START or END or UP or DOWN
                 return makeMovementFlags(
