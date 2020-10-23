@@ -31,7 +31,7 @@ In a notes app, if you wish to delete the note from your database, after it is s
 		adapter.removeItem(adapterPosition)  
 		}
 		
-![Sample video for Swipe to Delete](https://srv-file16.gofile.io/download/zEjWbR/rec-2020-10-24_00.08.27.gif)
+![Sample video for Swipe to Delete](https://s8.gifyu.com/images/rec-2020-10-24_00.10.04.md.gif)
 
 ## Drag To Shift
 
