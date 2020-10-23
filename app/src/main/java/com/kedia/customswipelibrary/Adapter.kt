@@ -1,7 +1,6 @@
 package com.kedia.customswipelibrary
 
 import android.content.Context
-import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,63 +24,12 @@ class Adapter(
         holder.bind(list[position])
     }
 
-    inner class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-//        GestureDetector.OnGestureListener, View.OnTouchListener
-                {
+    inner class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private var textView = itemView.findViewById<TextView>(R.id.textView)
-        private lateinit var gestureDetector: GestureDetector
 
         fun bind(string: String) {
             textView.text = string
-      //      textView.setGestures()
-//            gestureDetector = GestureDetector(itemView.context, this)
-//            itemView.setOnTouchListener(this)
         }
-
-//        override fun onDown(e: MotionEvent?): Boolean {
-//            return false
-//        }
-//
-//        override fun onShowPress(e: MotionEvent?) {}
-//
-//        override fun onSingleTapUp(e: MotionEvent?): Boolean {
-//
-//            return false
-//        }
-//
-//        override fun onScroll(
-//            e1: MotionEvent?,
-//            e2: MotionEvent?,
-//            distanceX: Float,
-//            distanceY: Float
-//        ): Boolean {
-//            return false
-//        }
-//
-//        override fun onLongPress(e: MotionEvent?) {
-//            Log.d("TAG!!!!","called long")
-//            touchHelper?.startDrag(this)
-//        }
-//
-//        override fun onFling(
-//            e1: MotionEvent?,
-//            e2: MotionEvent?,
-//            velocityX: Float,
-//            velocityY: Float
-//        ): Boolean {
-//            return false
-//        }
-
-//        override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-//            gestureDetector.onTouchEvent(event)
-//            return true
-//        }
-
     }
-
-//    override fun onItemMove(fromPosition: Int, toPosition: Int) {
-//        notifyItemMoved(fromPosition, toPosition)
-//    }
-
 }

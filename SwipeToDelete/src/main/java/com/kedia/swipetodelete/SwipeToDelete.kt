@@ -47,5 +47,4 @@ object SwipeToDelete  {
         LEFT(ItemTouchHelper.LEFT)
     }
 
-
 }
