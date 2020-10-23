@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.*
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.kedia.swipetodelete.CustomSwipesObject.setGestures
+import com.kedia.swipetodelete.DragAndDrop.setGestures
 import com.kedia.swipetodelete.ItemTouchHelperAdapter
 
 class Adapter(
