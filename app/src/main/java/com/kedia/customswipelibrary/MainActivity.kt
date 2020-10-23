@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), DragAndDrop.onDragged {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = this@MainActivity.adapter
         }
-        recycler.addDragToSwipe(this)
+        recycler.addDragToSwipe()
 
     }
 
