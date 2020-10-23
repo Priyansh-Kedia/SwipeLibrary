@@ -31,7 +31,6 @@ In a notes app, if you wish to delete the note from your database, after it is s
 		adapter.removeItem(adapterPosition)  
 		}
 		
-[![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
 
 ## Drag To Shift
 
@@ -46,3 +45,6 @@ In a notes app, if you wish to change positions of two notes in your database, a
     	override fun onPositionDragged(positionStart: Int, positionEnd: Int) {  
 			adapter.moveItem(positionStart, positionEnd)  
 		}
+		
+[![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
+
