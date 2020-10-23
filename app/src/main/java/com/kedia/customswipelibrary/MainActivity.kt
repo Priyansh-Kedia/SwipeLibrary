@@ -2,9 +2,10 @@ package com.kedia.customswipelibrary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.kedia.swipetodelete.CustomSwipesObject
+import com.kedia.swipetodelete.CustomSwipesObject.addDragToSwipe
 import com.kedia.swipetodelete.CustomSwipesObject.addSwipeToDelete
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity(), CustomSwipesObject.OnSwiped {
         for (i in 0..29) {
             list.add("some text $i")
         }
+        recycler.addDragToSwipe()
         adapter = Adapter(this@MainActivity, list)
         recycler.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
@@ -27,10 +29,10 @@ class MainActivity : AppCompatActivity(), CustomSwipesObject.OnSwiped {
 
         val list = listOf(CustomSwipesObject.DIRECTION.LEFT,
             CustomSwipesObject.DIRECTION.RIGHT)
-        recycler.addSwipeToDelete(adapter as RecyclerView.Adapter<RecyclerView.ViewHolder>, list, this)
+        recycler.addSwipeToDelete(list, this)
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
-
+        Log.d("TAG!!!!", adapter.itemCount.toString())
     }
 }
