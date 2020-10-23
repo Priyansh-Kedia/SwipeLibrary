@@ -30,6 +30,8 @@ In a notes app, if you wish to delete the note from your database, after it is s
         override fun swipeToDelete(adapterPosition: Int) {  
 		adapter.removeItem(adapterPosition)  
 		}
+		
+![Sample video for Swipe to Delete](https://srv-file16.gofile.io/download/zEjWbR/rec-2020-10-24_00.08.27.gif)
 
 ## Drag To Shift
 
