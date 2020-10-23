@@ -28,7 +28,7 @@ If no value is passed for the list, by default, **RIGHT** is the direction for s
 In a notes app, if you wish to delete the note from your database, after it is swiped, then you can used this method to perform the action. The note can be deleted by getting the *NOTE* using the adapter position inside the list passed to RecyclerView Adapter.
 
         override fun swipeToDelete(adapterPosition: Int) {  
-		    adapter.removeItem(adapterPosition)  
+		adapter.removeItem(adapterPosition)  
 	}
 
 ## Drag To Shift
@@ -42,5 +42,5 @@ Use *addDragToSwipe* as RecyclerView's extension function, to add this functiona
 In a notes app, if you wish to change positions of two notes in your database, after they are swapped, then you can used this method to perform the action. The notes can be swapped by getting the _NOTES_ using the adapter positions inside the list passed to RecyclerView Adapter.
 
     	override fun onPositionDragged(positionStart: Int, positionEnd: Int) {  
-		    adapter.moveItem(positionStart, positionEnd)  
+		adapter.moveItem(positionStart, positionEnd)  
     	}
