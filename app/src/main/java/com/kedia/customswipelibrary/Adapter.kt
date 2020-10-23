@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Adapter(
     private val context: Context,
-    private val list: List<String>
+    private val list: MutableList<String>
 ): RecyclerView.Adapter<Adapter.CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -22,6 +22,10 @@ class Adapter(
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.bind(list[position])
+    }
+
+    fun removeItem(adapterPosition: Int) {
+        this.list.removeAt(adapterPosition)
     }
 
     inner class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

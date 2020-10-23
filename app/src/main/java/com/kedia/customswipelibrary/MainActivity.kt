@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kedia.swipetodelete.DragAndDrop
 import com.kedia.swipetodelete.DragAndDrop.addDragToSwipe
 import com.kedia.swipetodelete.SwipeToDelete
 import com.kedia.swipetodelete.SwipeToDelete.addSwipeToDelete
@@ -40,6 +41,6 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
-        Log.d("TAG!!!!",adapterPosition.toString())
+        adapter.removeItem(adapterPosition)
     }
 }
