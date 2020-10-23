@@ -28,8 +28,8 @@ object SwipeToDelete  {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
                 listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition)
+                this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
             }
 
         }

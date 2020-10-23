@@ -1,6 +1,7 @@
 package com.kedia.customswipelibrary
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kedia.swipetodelete.DragAndDrop.addDragToSwipe
@@ -34,6 +35,6 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
-
+        Log.d("TAG!!!!",adapterPosition.toString())
     }
 }
