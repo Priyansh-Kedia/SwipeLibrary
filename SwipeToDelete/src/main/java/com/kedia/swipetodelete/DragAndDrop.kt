@@ -52,7 +52,7 @@ object DragAndDrop: View.OnTouchListener, GestureDetector.OnGestureListener {
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
-                (adapter as ItemTouchHelperAdapter).onItemMove(viewHolder.adapterPosition, target.adapterPosition)
+                adapter?.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
                 return true
             }
 
