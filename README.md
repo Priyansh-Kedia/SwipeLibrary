@@ -35,6 +35,8 @@ In a notes app, if you wish to delete the note from your database, after it is s
 
 
 ---		
+***
+___
 
 ## Drag To Shift
 
