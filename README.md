@@ -23,6 +23,7 @@ If no value is passed for the list, by default, **RIGHT** is the direction for s
 
 
 > The second parameter is the *listener* for the interface method. The by default value of this parameter is null. If passed, the activity/fragment should implement `SwipeToDelete.OnSwiped`. This method will be called when the RecyclerView item is swiped out, and it returns the position of the element that was swiped. 
+
 **Implementation of interface method**
 In a notes app, if you wish to delete the note from your database, after it is swiped, then you can used this method to perform the action. The note can be deleted by getting the *NOTE* using the adapter position inside the list passed to RecyclerView Adapter.
 
