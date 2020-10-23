@@ -12,7 +12,7 @@ import com.kedia.swipetodelete.ItemTouchHelperAdapter
 class Adapter(
     private val context: Context,
     private val list: List<String>
-): RecyclerView.Adapter<Adapter.CustomViewHolder>(), ItemTouchHelperAdapter {
+): RecyclerView.Adapter<Adapter.CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         return CustomViewHolder(LayoutInflater.from(context).inflate(R.layout.ic_card, parent, false))
@@ -81,9 +81,8 @@ class Adapter(
 
     }
 
-    override fun onItemMove(fromPosition: Int, toPosition: Int) {
-
-        notifyItemMoved(fromPosition, toPosition)
-    }
+//    override fun onItemMove(fromPosition: Int, toPosition: Int) {
+//        notifyItemMoved(fromPosition, toPosition)
+//    }
 
 }
