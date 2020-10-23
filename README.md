@@ -28,5 +28,13 @@ If no value is passed for the list, by default, **RIGHT** is the direction for s
 In a notes app, if you wish to delete the note from your database, after it is swiped, then you can used this method to perform the action. The note can be deleted by getting the *NOTE* using the adapter position inside the list passed to RecyclerView Adapter.
 
 
-## Drag to Shift
+## Drag To Shift
+
+Highlight, move and shift items of RecyclerView with just a single line of code.
+Use *addDragToSwipe* as RecyclerView's extension function, to add this functionality to your RecyclerView. This extension has **one** optional parameter.
+
+> The parameter is the listener for the interface method. The by default value for this parameter is null. If passed, the activity/fragment should implement `DragAndDrop.onDragged`. This method will be called when the RecyclerView item is dragged and dropped to some other position, and it returns the two positions that were swapped.	
+
+**Implementation of interface method** :- 
+In a notes app, if you wish to change positions of two notes in your database, after they are swapped, then you can used this method to perform the action. The notes can be swapped by getting the _NOTES_ using the adapter positions inside the list passed to RecyclerView Adapter.
 
