@@ -15,7 +15,7 @@ SwipeLibrary contains the following functions:
 Add swipe to delete RecyclerView's items from the list, which a single line of code.
 
 Use *addSwipeToDelete* as RecyclerView's extension function, to add this functionality to your RecyclerView. 
-This extension function has **two** optional parameter. 
+This extension function has **two** optional parameters. 
 > The first parameter is the list of directions in which swipe should be allowed. The directions can be either **TOP**, **BOTTOM**, **RIGHT**, **LEFT**.
 The list of directions can be made like this,
 		`val list = listOf(SwipeToDelete.DIRECTION.LEFT,SwipeToDelete.DIRECTION.RIGHT)`
