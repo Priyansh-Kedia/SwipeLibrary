@@ -1,12 +1,8 @@
 package com.kedia.swipetodelete
 
-import android.view.GestureDetector
-import android.view.MotionEvent
-import android.view.View
 import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.ItemTouchHelper.*
+import androidx.recyclerview.widget.ItemTouchHelper.RIGHT
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
 object SwipeToDelete  {
 
