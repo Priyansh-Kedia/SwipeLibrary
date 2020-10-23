@@ -29,7 +29,7 @@ In a notes app, if you wish to delete the note from your database, after it is s
 
         override fun swipeToDelete(adapterPosition: Int) {  
 		adapter.removeItem(adapterPosition)  
-	}
+		}
 
 ## Drag To Shift
 
@@ -43,4 +43,4 @@ In a notes app, if you wish to change positions of two notes in your database, a
 
     	override fun onPositionDragged(positionStart: Int, positionEnd: Int) {  
 			adapter.moveItem(positionStart, positionEnd)  
-	}
+		}
