@@ -31,6 +31,11 @@ In a notes app, if you wish to delete the note from your database, after it is s
 		adapter.removeItem(adapterPosition)  
 		}
 		
+[![rec-2020-10-24_00.08.27.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.08.27.gif)](https://gifyu.com/image/8jlD)
+
+
+===================================================================================================================================================================
+		
 
 ## Drag To Shift
 
