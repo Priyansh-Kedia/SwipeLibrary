@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
         val list = listOf(SwipeToDelete.DIRECTION.LEFT,
             SwipeToDelete.DIRECTION.RIGHT)
         recycler.addSwipeToDelete(list, this)
+//        try {
+//            SwipeToDelete.javaClass.getDeclaredMethod("some").invoke(SwipeToDelete)
+//        } catch (e: NoSuchMethodException) {
+//            e.printStackTrace()
+//        }
     }
 
     override fun swipeToDelete(adapterPosition: Int) {

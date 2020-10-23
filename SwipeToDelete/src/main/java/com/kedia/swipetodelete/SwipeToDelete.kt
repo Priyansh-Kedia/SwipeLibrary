@@ -1,5 +1,6 @@
 package com.kedia.swipetodelete
 
+import android.util.Log
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.RIGHT
 import androidx.recyclerview.widget.RecyclerView
