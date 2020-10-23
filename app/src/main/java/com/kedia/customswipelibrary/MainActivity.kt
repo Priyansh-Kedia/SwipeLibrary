@@ -3,7 +3,6 @@ package com.kedia.customswipelibrary
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kedia.swipetodelete.DragAndDrop.addDragToSwipe
 import com.kedia.swipetodelete.SwipeToDelete
 import com.kedia.swipetodelete.SwipeToDelete.addSwipeToDelete
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,8 +24,6 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = this@MainActivity.adapter
         }
-
-        recycler.addDragToSwipe()
 
         val list = listOf(SwipeToDelete.DIRECTION.LEFT,
             SwipeToDelete.DIRECTION.RIGHT)
