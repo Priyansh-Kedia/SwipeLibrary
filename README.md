@@ -1,3 +1,3 @@
 # SwipeLibrary
 
-Extension Library to add swipe functionalities to the RecyclerView
+Extension Library to add swipe functionality to the RecyclerView

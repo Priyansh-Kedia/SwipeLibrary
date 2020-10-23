@@ -36,15 +36,6 @@ object SwipeToDelete  {
         ItemTouchHelper(simpleCallback).attachToRecyclerView(this)
     }
 
-    private fun onItemMove(
-        fromPosition: Int,
-        toPosition: Int,
-        recyclerView: RecyclerView
-    ) {
-        recyclerView.adapter?.notifyItemMoved(fromPosition, toPosition)
-    }
-
-
     interface OnSwiped {
         fun swipeToDelete(adapterPosition: Int)
     }
