@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity(), DragAndDrop.onDragged {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = this@MainActivity.adapter
         }
-        recycler.addDragToSwipe()
+        recycler.addDragToSwipe(this)
 
     }
 
     override fun onPositionDragged(positionStart: Int, positionEnd: Int) {
-        Log.d("TAG!!!!", "$positionEnd $positionStart")
+        adapter.moveItem(positionStart, positionEnd)
     }
 
 }
