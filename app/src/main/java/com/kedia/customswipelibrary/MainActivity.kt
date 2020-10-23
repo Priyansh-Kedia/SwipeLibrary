@@ -32,6 +32,6 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
-        Log.d("TAG!!!!", adapterPosition.toString());
+        adapter.removeItem(adapterPosition)
     }
 }
