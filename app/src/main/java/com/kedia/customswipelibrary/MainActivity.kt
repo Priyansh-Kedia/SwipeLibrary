@@ -20,12 +20,14 @@ class MainActivity : AppCompatActivity(), CustomSwipesObject.OnSwiped {
         for (i in 0..29) {
             list.add("some text $i")
         }
-        recycler.addDragToSwipe()
+
         adapter = Adapter(this@MainActivity, list)
         recycler.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = this@MainActivity.adapter
         }
+
+        recycler.addDragToSwipe()
 
         val list = listOf(CustomSwipesObject.DIRECTION.LEFT,
             CustomSwipesObject.DIRECTION.RIGHT)
