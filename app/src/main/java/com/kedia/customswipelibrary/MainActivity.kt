@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.kedia.swipetodelete.DragAndDrop.addDragToShift
 import com.kedia.swipetodelete.SwipeToDelete
 import com.kedia.swipetodelete.SwipeToDelete.addSwipeToDelete
+import com.kedia.swipetodelete.some
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
         for (i in 0..29) {
             list.add("some text $i")
         }
+
+        val s = some()
+
 
         adapter = Adapter(this@MainActivity, list)
         recycler.apply {
