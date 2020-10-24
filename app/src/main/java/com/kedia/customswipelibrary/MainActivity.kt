@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
 
         val list = listOf(SwipeToDelete.DIRECTION.LEFT,
             SwipeToDelete.DIRECTION.RIGHT)
-        recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorAccent), ContextCompat.getColor(this, R.color.colorPrimaryDark))
+        recycler.addSwipeToDelete(list, this)
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
