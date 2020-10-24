@@ -5,6 +5,16 @@ SwipeLibrary provides extension functions for handling swipe actions in Recycler
 You can add **Swipe To Delete** and **Drag and Shift** like functionalities with just one line of code.
 
 
+Add this to your project level build.gradle file followed by the respective dependency
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+
 # Extension Functions
 
 SwipeLibrary contains the following functions:
