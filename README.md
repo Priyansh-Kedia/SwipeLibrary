@@ -20,7 +20,7 @@ Add this to your project level build.gradle file followed by the respective depe
 Add the following dependency in your build.gradle file
 
 	dependencies {
-	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:<latest:version>'
+	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:<latest_version>'
 	}
 
 
