@@ -1,8 +1,12 @@
 package com.kedia.swipetodelete
 
+import android.R
+import android.graphics.*
+import android.view.View
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.RIGHT
 import androidx.recyclerview.widget.RecyclerView
+
 
 object SwipeToDelete  {
 
@@ -31,7 +35,6 @@ object SwipeToDelete  {
                 listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition)
                 this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
             }
-
         }
         ItemTouchHelper(simpleCallback).attachToRecyclerView(this)
     }
