@@ -3,6 +3,7 @@ package com.kedia.customswipelibrary
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kedia.swipetodelete.DragAndDrop
 import com.kedia.swipetodelete.DragAndDrop.addDragToSwipe
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
 
         val list = listOf(SwipeToDelete.DIRECTION.LEFT,
             SwipeToDelete.DIRECTION.RIGHT)
-        recycler.addSwipeToDelete(list, this)
+        recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //        try {
 //            SwipeToDelete.javaClass.getDeclaredMethod("some").invoke(SwipeToDelete)
 //        } catch (e: NoSuchMethodException) {

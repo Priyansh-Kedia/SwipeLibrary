@@ -13,7 +13,7 @@ object DragAndDrop: View.OnTouchListener, GestureDetector.OnGestureListener {
 
     private lateinit var holder: RecyclerView.ViewHolder
 
-    fun RecyclerView.addDragToSwipe(): ItemTouchHelper {
+    fun RecyclerView.addDragToSwipe(listener: onDragged? = null): ItemTouchHelper {
 
         val itemTouchCallback = object : ItemTouchHelper.Callback() {
             override fun onSelectedChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {
@@ -52,6 +52,7 @@ object DragAndDrop: View.OnTouchListener, GestureDetector.OnGestureListener {
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
+                listener?.onPositionDragged(viewHolder.adapterPosition, target.adapterPosition)
                 adapter?.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
                 return true
             }
@@ -109,6 +110,10 @@ object DragAndDrop: View.OnTouchListener, GestureDetector.OnGestureListener {
         velocityY: Float
     ): Boolean {
         return false
+    }
+
+    interface onDragged {
+        fun onPositionDragged(positionStart: Int, positionEnd: Int)
     }
 
 }
