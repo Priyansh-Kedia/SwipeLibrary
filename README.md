@@ -58,6 +58,12 @@ In a notes app, if you wish to delete the note from your database, after it is s
 
 > The fourth parameter is an optional parameter, for the second Color integer, if the user wants two colors in the background, the user can pass both **Parameter 3 and Parameter 4**.
 
+**Java Implementation**
+All the optional parameters are null, and thus the simplest implementation is,
+
+    SwipeToDeleteKt.addSwipeToDelete(recyclerView, null, null, null, null);
+The optional parameters can be provided if needed.    
+
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
 
 
