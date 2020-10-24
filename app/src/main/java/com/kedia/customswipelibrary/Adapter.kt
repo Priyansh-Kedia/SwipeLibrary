@@ -28,11 +28,8 @@ class Adapter(
 
     fun moveItem(positionStart: Int, positionEnd: Int) {
         val temp = list[positionEnd]
-        Log.d("TAG!!!!", temp)
         list[positionEnd] = list[positionStart]
-        Log.d("TAG!!!!", list[positionEnd])
         list[positionStart] = temp
-        Log.d("TAG!!!!", list[positionStart])
     }
 
     inner class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
