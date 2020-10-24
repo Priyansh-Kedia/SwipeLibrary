@@ -13,7 +13,7 @@ object DragAndDrop: View.OnTouchListener, GestureDetector.OnGestureListener {
 
     private lateinit var holder: RecyclerView.ViewHolder
 
-    fun RecyclerView.addDragToSwipe(listener: onDragged? = null): ItemTouchHelper {
+    fun RecyclerView.addDragToShift(listener: onDragged? = null): ItemTouchHelper {
 
         val itemTouchCallback = object : ItemTouchHelper.Callback() {
             override fun onSelectedChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {
