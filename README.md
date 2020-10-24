@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/Priyansh-Kedia/SwipeLibrary.svg)](https://jitpack.io/#Priyansh-Kedia/SwipeLibrary)
+
 # SwipeLibrary
 
 SwipeLibrary provides extension functions for handling swipe actions in RecyclerView. 
