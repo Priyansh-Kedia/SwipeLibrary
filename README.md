@@ -89,4 +89,14 @@ In a notes app, if you wish to change positions of two notes in your database, a
 			adapter.moveItem(positionStart, positionEnd)  
 		}
 		
+## Java Implementation
+All the optional parameters are null, and thus the simplest implementation is,
+
+    DragAndDropKt.addDragToShift(recyclerView,null);
+    
+## Kotlin Implementation
+	recycler.addDragToShift()
+	
+The optional parameter can be provided if needed.    		
+		
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
