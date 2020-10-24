@@ -31,7 +31,7 @@ SwipeLibrary contains the following functions:
 - [Swipe To Delete](#swipe-to-delete)
 - [Drag to Shift](#drag-to-shift)
 
-## Swipe To Delete
+# Swipe To Delete
 
 Add swipe to delete RecyclerView's items from the list, which a single line of code.
 
@@ -71,7 +71,7 @@ The optional parameters can be provided if needed.
 ***
 ___
 
-## Drag To Shift
+# Drag To Shift
 
 Highlight, move and shift items of RecyclerView with just a single line of code.
 Use *addDragToShift* as RecyclerView's extension function, to add this functionality to your RecyclerView. This extension has **one** optional parameter.
