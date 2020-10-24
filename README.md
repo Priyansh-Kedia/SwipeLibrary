@@ -62,6 +62,10 @@ In a notes app, if you wish to delete the note from your database, after it is s
 All the optional parameters are null, and thus the simplest implementation is,
 
     SwipeToDeleteKt.addSwipeToDelete(recyclerView, null, null, null, null);
+    
+## Kotlin Implementation
+	recyclerView.addSwipeToDelete()
+	
 The optional parameters can be provided if needed.    
 
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
