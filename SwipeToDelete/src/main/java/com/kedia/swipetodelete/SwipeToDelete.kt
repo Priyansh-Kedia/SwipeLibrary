@@ -8,16 +8,18 @@ import java.lang.Exception
 
 
 fun RecyclerView.addSwipeToDelete(
-    list: List<DIRECTION> = emptyList(),
+    list: List<DIRECTION>? = emptyList(),
     listener: OnSwiped? = null,
     @ColorInt colorOneInt: Int? = null,
     @ColorInt colorTwoInt: Int? = null
 ) {
 
     var swipeDirs = ItemTouchHelper.RIGHT
-    for (element in list) {
-        if (element != DIRECTION.RIGHT) {
-            swipeDirs = swipeDirs or DIRECTION.valueOf(element.name).direction
+    list?.apply {
+        for (element in list) {
+            if (element != DIRECTION.RIGHT) {
+                swipeDirs = swipeDirs or DIRECTION.valueOf(element.name).direction
+            }
         }
     }
 
