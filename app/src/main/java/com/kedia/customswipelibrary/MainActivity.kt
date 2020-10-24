@@ -3,6 +3,8 @@ package com.kedia.customswipelibrary
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kedia.swipetodelete.SwipeToDelete
 import com.kedia.swipetodelete.SwipeToDelete.addSwipeToDelete
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
 
         val list = listOf(SwipeToDelete.DIRECTION.LEFT,
             SwipeToDelete.DIRECTION.RIGHT)
-        recycler.addSwipeToDelete(list, this)
+        recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorAccent), ContextCompat.getColor(this, R.color.colorPrimaryDark))
     }
 
     override fun swipeToDelete(adapterPosition: Int) {

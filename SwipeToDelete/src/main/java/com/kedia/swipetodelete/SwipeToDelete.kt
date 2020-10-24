@@ -1,18 +1,21 @@
 package com.kedia.swipetodelete
 
-import android.R
-import android.graphics.*
-import android.view.View
+import android.graphics.Canvas
+import android.graphics.Color
+import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.RIGHT
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.Exception
 
 
 object SwipeToDelete  {
 
     fun RecyclerView.addSwipeToDelete(
         list: List<DIRECTION> = emptyList(),
-        listener: OnSwiped? = null
+        listener: OnSwiped? = null,
+        @ColorInt colorOneInt: Int? = null,
+        @ColorInt colorTwoInt: Int? = null
     ) {
 
         var swipeDirs = RIGHT
@@ -35,8 +38,47 @@ object SwipeToDelete  {
                 listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition)
                 this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
             }
+
+            override fun onChildDraw(
+                c: Canvas,
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                dX: Float,
+                dY: Float,
+                actionState: Int,
+                isCurrentlyActive: Boolean
+            ) {
+                c.clipRect(0f, viewHolder.itemView.top.toFloat(),
+                    dX, viewHolder.itemView.bottom.toFloat())
+
+                if (colorTwoInt != null && colorOneInt == null)
+                    throw Exception("Color One cannot be null if Color Two is non null")
+
+                if (colorTwoInt == null) {
+                        colorOneInt?.apply { c.drawColor(this) }
+                } else {
+                    if(dX < width / 2)
+                        colorOneInt?.apply { c.drawColor(this) }
+                    else
+                        colorTwoInt?.apply { c.drawColor(this) }
+                }
+
+                super.onChildDraw(
+                    c,
+                    recyclerView,
+                    viewHolder,
+                    dX,
+                    dY,
+                    actionState,
+                    isCurrentlyActive
+                )
+            }
         }
         ItemTouchHelper(simpleCallback).attachToRecyclerView(this)
+    }
+
+    private fun Float.isPositive(): Boolean {
+        return this > 0
     }
 
     interface OnSwiped {
