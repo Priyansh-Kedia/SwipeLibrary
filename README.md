@@ -4,7 +4,8 @@ SwipeLibrary provides extension functions for handling swipe actions in Recycler
 
 You can add **Swipe To Delete** and **Drag and Shift** like functionalities with just one line of code.
 
-
+	
+# Dependency
 Add this to your project level build.gradle file followed by the respective dependency
 
 	allprojects {
@@ -13,6 +14,13 @@ Add this to your project level build.gradle file followed by the respective depe
 			maven { url 'https://jitpack.io' }
 		}
 	}
+
+Add the following dependency in your build.gradle file
+
+	dependencies {
+	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:1.1'
+	}
+
 
 
 # Extension Functions
@@ -51,14 +59,6 @@ In a notes app, if you wish to delete the note from your database, after it is s
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
 
 
-# Dependency
-Add the following dependency in your build.gradle file
-
-	dependencies {
-	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:1.0'
-	}
-
-
 ---		
 ***
 ___
@@ -66,7 +66,7 @@ ___
 ## Drag To Shift
 
 Highlight, move and shift items of RecyclerView with just a single line of code.
-Use *addDragToSwipe* as RecyclerView's extension function, to add this functionality to your RecyclerView. This extension has **one** optional parameter.
+Use *addDragToShift* as RecyclerView's extension function, to add this functionality to your RecyclerView. This extension has **one** optional parameter.
 
 > The parameter is the listener for the interface method. The by default value for this parameter is null. If passed, the activity/fragment should implement `DragAndDrop.onDragged`. This method will be called when the RecyclerView item is dragged and dropped to some other position, and it returns the two positions that were swapped.	
 
@@ -78,13 +78,3 @@ In a notes app, if you wish to change positions of two notes in your database, a
 		}
 		
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
-
-
-# Dependency
-Add the following dependency in your build.gradle file
-
-	dependencies {
-	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:1.1'
-	}
-
-
