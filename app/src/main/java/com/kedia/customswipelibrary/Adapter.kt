@@ -28,6 +28,12 @@ class Adapter(
         this.list.removeAt(adapterPosition)
     }
 
+    fun moveItem(start: Int, end: Int) {
+        val temp = list[start]
+        list[start] = list[end]
+        list[end] = temp
+    }
+
     inner class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private var textView = itemView.findViewById<TextView>(R.id.textView)

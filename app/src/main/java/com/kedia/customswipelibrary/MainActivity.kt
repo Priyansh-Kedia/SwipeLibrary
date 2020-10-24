@@ -4,13 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kedia.swipetodelete.DragAndDrop.addDragToShift
-import com.kedia.swipetodelete.SwipeToDelete
-import com.kedia.swipetodelete.SwipeToDelete.addSwipeToDelete
-import com.kedia.swipetodelete.some
+import com.kedia.swipetodelete.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
+class MainActivity : AppCompatActivity(), OnSwiped, OnDragged {
 
     private val list = mutableListOf<String>()
     private lateinit var adapter: Adapter
@@ -22,19 +19,17 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
             list.add("some text $i")
         }
 
-        val s = some()
-
-
         adapter = Adapter(this@MainActivity, list)
         recycler.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = this@MainActivity.adapter
         }
 
-        recycler.addDragToShift()
+        recycler.addDragToShift(this)
 
-        val list = listOf(SwipeToDelete.DIRECTION.LEFT,
-            SwipeToDelete.DIRECTION.RIGHT)
+        val list = listOf(
+            DIRECTION.LEFT,
+            DIRECTION.RIGHT)
         recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
 //        try {
 //            SwipeToDelete.javaClass.getDeclaredMethod("some").invoke(SwipeToDelete)
@@ -43,7 +38,12 @@ class MainActivity : AppCompatActivity(), SwipeToDelete.OnSwiped {
 //        }
     }
 
+    override fun onPositionDragged(fromPosition: Int, toPosition: Int) {
+        adapter.moveItem(fromPosition, toPosition)
+    }
+
     override fun swipeToDelete(adapterPosition: Int) {
         adapter.removeItem(adapterPosition)
     }
+
 }
