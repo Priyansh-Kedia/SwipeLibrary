@@ -5,6 +5,16 @@ SwipeLibrary provides extension functions for handling swipe actions in Recycler
 You can add **Swipe To Delete** and **Drag and Shift** like functionalities with just one line of code.
 
 
+Add this to your project level build.gradle file followed by the respective dependency
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+
 # Extension Functions
 
 SwipeLibrary contains the following functions:
@@ -41,6 +51,14 @@ In a notes app, if you wish to delete the note from your database, after it is s
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
 
 
+# Dependency
+Add the following dependency in your build.gradle file
+
+	dependencies {
+	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:1.0'
+	}
+
+
 ---		
 ***
 ___
@@ -60,4 +78,13 @@ In a notes app, if you wish to change positions of two notes in your database, a
 		}
 		
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
+
+
+# Dependency
+Add the following dependency in your build.gradle file
+
+	dependencies {
+	        implementation 'com.github.Priyansh-Kedia:SwipeLibrary:1.1'
+	}
+
 
