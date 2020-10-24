@@ -31,7 +31,9 @@ In a notes app, if you wish to delete the note from your database, after it is s
 		adapter.removeItem(adapterPosition)  
 		}
 		
-[![rec-2020-10-24_00.08.27.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.08.27.gif)](https://gifyu.com/image/8jlD)
+> The third parameter is an optional parameter, for the Color integer, if the user wants a color in the background when the view is swiped out. This is how the user can pass the Color int as the parameter, `ContextCompat.getColor(this, R.color.colorAccent)`
+
+[![rec-2020-10-24_14.38.15.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.38.15.gif)](https://gifyu.com/image/8FMg)
 
 
 ---		
