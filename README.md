@@ -102,3 +102,8 @@ All the optional parameters are null, and thus the simplest implementation is,
 The optional parameter can be provided if needed.    		
 		
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
+
+
+### Found this library useful? :heart:
+
+Support it by joining [stargazers](https://github.com/Priyansh-Kedia/SwipeLibrary/stargazers) for this repository. :star2:
