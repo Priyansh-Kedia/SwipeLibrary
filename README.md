@@ -99,7 +99,53 @@ All the optional parameters are null, and thus the simplest implementation is,
 ## Kotlin Implementation
 	recycler.addDragToShift()
 	
-The optional parameter can be provided if needed.    		
+The optional parameter can be provided if needed.  
+
+
+---		
+***
+___
+
+# Swipe to Perform
+
+Add swipe to perform a custom task on RecyclerView's items from the list, which a single line of code.
+
+Use *addSwipeToPerform* as RecyclerView's extension function, to add this functionality to your RecyclerView. 
+This extension function has **two** optional parameter. 
+> The first parameter is the list of directions in which swipe should be allowed. The directions can be either **TOP**, **BOTTOM**, **RIGHT**, **LEFT**.
+The list of directions can be made like this,
+		`val list = listOf(DIRECTION.LEFT,DIRECTION.RIGHT)`
+If no value is passed for the list, by default, **RIGHT** is the direction for swipe.
+
+> The second parameter is the *listener* for the interface method. The by default value of this parameter is null. If passed, the activity/fragment should implement `OnSwipeToPerform`. This method will be called when the RecyclerView item is swiped out, and it returns the position of the element that was swiped. 
+
+**Implementation of interface method**
+In a notes app, if you wish to perform a task when a note is swiped, then you can used this method to perform the action. 
+
+        override fun swipeToPerform(adapterPosition: Int) {  
+			// Perform your task
+		}
+		
+> The third parameter is an optional parameter, for the Color integer, if the user wants a color in the background when the view is swiped out. This is how the user can pass the Color int as the parameter, `ContextCompat.getColor(this, R.color.colorAccent)`
+
+[![rec-2020-10-24_14.38.15.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.38.15.gif)](https://gifyu.com/image/8FMg)
+
+
+> The fourth parameter is an optional parameter, for the second Color integer, if the user wants two colors in the background, the user can pass both **Parameter 3 and Parameter 4**.
+
+[![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
+
+## Java Implementation
+All the optional parameters are null, and thus the simplest implementation is,
+
+    SwipeToDeleteKt.addSwipeToPerform(recyclerView, null, null, null, null);
+    
+## Kotlin Implementation
+	recyclerView.addSwipeToPerform()
+	
+The optional parameters can be provided if needed.    
+
+
 		
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
 
