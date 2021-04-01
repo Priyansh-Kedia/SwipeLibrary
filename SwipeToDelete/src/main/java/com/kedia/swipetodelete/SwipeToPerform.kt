@@ -7,10 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kedia.swipetodelete.utils.DIRECTION
 import java.lang.Exception
 
-
-fun RecyclerView.addSwipeToDelete(
+fun RecyclerView.addSwipeToPerform(
     list: List<DIRECTION>? = emptyList(),
-    listener: OnSwiped? = null,
+    listener: OnSwipeToPerform? = null,
     @ColorInt colorOneInt: Int? = null,
     @ColorInt colorTwoInt: Int? = null
 ) {
@@ -34,8 +33,7 @@ fun RecyclerView.addSwipeToDelete(
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition)
-            this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
+            listener?.swipeToPerform(adapterPosition = viewHolder.adapterPosition)
         }
 
         override fun onChildDraw(
@@ -76,11 +74,6 @@ fun RecyclerView.addSwipeToDelete(
     ItemTouchHelper(simpleCallback).attachToRecyclerView(this)
 }
 
-private fun Float.isPositive(): Boolean {
-    return this > 0
+interface OnSwipeToPerform {
+    fun swipeToPerform(adapterPosition: Int)
 }
-
-interface OnSwiped {
-    fun swipeToDelete(adapterPosition: Int)
-}
-
