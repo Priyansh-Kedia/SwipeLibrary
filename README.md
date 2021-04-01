@@ -128,6 +128,8 @@ In a notes app, if you wish to perform a task when a note is swiped, then you ca
 		
 > The third parameter is an optional parameter, for the Color integer, if the user wants a color in the background when the view is swiped out. This is how the user can pass the Color int as the parameter, `ContextCompat.getColor(this, R.color.colorAccent)`
 
+We have performed deletion for the particular case.
+
 [![rec-2020-10-24_14.38.15.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.38.15.gif)](https://gifyu.com/image/8FMg)
 
 
@@ -138,7 +140,7 @@ In a notes app, if you wish to perform a task when a note is swiped, then you ca
 ## Java Implementation
 All the optional parameters are null, and thus the simplest implementation is,
 
-    SwipeToDeleteKt.addSwipeToPerform(recyclerView, null, null, null, null);
+    SwipeToPerformKt.addSwipeToPerform(recyclerView, null, null, null, null);
     
 ## Kotlin Implementation
 	recyclerView.addSwipeToPerform()
