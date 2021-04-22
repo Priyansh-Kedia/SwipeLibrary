@@ -61,12 +61,12 @@ In a notes app, if you wish to delete the note from your database, after it is s
 
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
 
-## Java Implementation
+### Java Implementation
 All the optional parameters are null, and thus the simplest implementation is,
 
     SwipeToDeleteKt.addSwipeToDelete(recyclerView, null, null, null, null);
     
-## Kotlin Implementation
+### Kotlin Implementation
 	recyclerView.addSwipeToDelete()
 	
 The optional parameters can be provided if needed.    
@@ -91,20 +91,19 @@ In a notes app, if you wish to change positions of two notes in your database, a
 			adapter.moveItem(positionStart, positionEnd)  
 		}
 		
-## Java Implementation
+### Java Implementation
 All the optional parameters are null, and thus the simplest implementation is,
 
     DragAndDropKt.addDragToShift(recyclerView,null);
     
-## Kotlin Implementation
+### Kotlin Implementation
 	recycler.addDragToShift()
 	
 The optional parameter can be provided if needed.  
 
 
 ---		
-***
-___
+
 
 # Swipe to Perform
 
@@ -137,12 +136,12 @@ We have performed deletion for the particular case.
 
 [![rec-2020-10-24_14.43.59.gif](https://s8.gifyu.com/images/rec-2020-10-24_14.43.59.gif)](https://gifyu.com/image/8Fpk)
 
-## Java Implementation
+### Java Implementation
 All the optional parameters are null, and thus the simplest implementation is,
 
     SwipeToPerformKt.addSwipeToPerform(recyclerView, null, null, null, null);
     
-## Kotlin Implementation
+### Kotlin Implementation
 	recyclerView.addSwipeToPerform()
 	
 The optional parameters can be provided if needed.    
@@ -152,6 +151,6 @@ The optional parameters can be provided if needed.
 [![rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif](https://s8.gifyu.com/images/rec-2020-10-24_00.10.0459f8d3ce489a4f0f.gif)](https://gifyu.com/image/8jl5)
 
 
-### Found this library useful? :heart:
+## Found this library useful? :heart:
 
 Support it by joining [stargazers](https://github.com/Priyansh-Kedia/SwipeLibrary/stargazers) for this repository. :star2:
