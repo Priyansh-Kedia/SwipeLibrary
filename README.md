@@ -75,8 +75,7 @@ The optional parameters can be provided if needed.
 
 
 ---		
-***
-___
+
 
 # Drag To Shift
 
