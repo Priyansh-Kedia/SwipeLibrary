@@ -4,7 +4,7 @@
 
 SwipeLibrary provides extension functions for handling swipe actions in RecyclerView. 
 
-You can add **Swipe To Delete** and **Drag and Shift** like functionalities with just one line of code.
+You can add **Swipe To Delete** and **Drag and Shift** and **Swipe to perform** like functionalities with just one line of code.
 
 	
 # Dependency
