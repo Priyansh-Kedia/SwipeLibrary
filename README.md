@@ -30,6 +30,7 @@ Add the following dependency in your build.gradle file
 SwipeLibrary contains the following functions:
 - [Swipe To Delete](#swipe-to-delete)
 - [Drag to Shift](#drag-to-shift)
+- [Swipe to Perform](#swipe-to-perform)
 
 # Swipe To Delete
 
