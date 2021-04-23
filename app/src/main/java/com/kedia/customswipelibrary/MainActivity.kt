@@ -33,19 +33,24 @@ class MainActivity : AppCompatActivity(), OnSwiped, OnDragged, OnSwipeToPerform 
             DIRECTION.LEFT,
             DIRECTION.RIGHT)
         recycler.addSwipeToPerform(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
+
+        /**
+        recycler.addSwipeToPerform(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
         recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
-//        try {
-//            SwipeToDelete.javaClass.getDeclaredMethod("some").invoke(SwipeToDelete)
-//        } catch (e: NoSuchMethodException) {
-//            e.printStackTrace()
-//        }
+
+         Only one of these methods can be used at once, because add swipe to delete is just a subset of
+         swipe to perform
+         */
+
     }
 
     override fun onPositionDragged(fromPosition: Int, toPosition: Int) {
+        Log.d("TAG!!!!", "onPositionDragged: ")
         adapter.moveItem(fromPosition, toPosition)
     }
 
     override fun swipeToDelete(adapterPosition: Int) {
+        Log.d("TAG!!!!", "swipeToDelete: ")
         adapter.removeItem(adapterPosition)
     }
 
