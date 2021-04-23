@@ -34,7 +34,15 @@ fun RecyclerView.addSwipeToDelete(
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition)
+            val swipeDirection: DIRECTION = when(direction) {
+                ItemTouchHelper.UP -> DIRECTION.UP
+                ItemTouchHelper.DOWN -> DIRECTION.DOWN
+                ItemTouchHelper.LEFT -> DIRECTION.LEFT
+                else -> DIRECTION.RIGHT
+            }
+            listener?.swipeToDelete(adapterPosition = viewHolder.adapterPosition,
+                swipeDirection = swipeDirection
+            )
             this@addSwipeToDelete.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
         }
 
@@ -81,6 +89,6 @@ private fun Float.isPositive(): Boolean {
 }
 
 interface OnSwiped {
-    fun swipeToDelete(adapterPosition: Int)
+    fun swipeToDelete(adapterPosition: Int, swipeDirection: DIRECTION)
 }
 

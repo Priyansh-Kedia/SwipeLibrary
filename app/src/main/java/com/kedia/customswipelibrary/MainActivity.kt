@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnSwiped, OnDragged, OnSwipeToPerform 
         val list = listOf(
             DIRECTION.LEFT,
             DIRECTION.RIGHT)
-        recycler.addSwipeToPerform(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
+        recycler.addSwipeToDelete(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
 
         /**
         recycler.addSwipeToPerform(list, this, ContextCompat.getColor(this, R.color.colorPrimaryDark))
@@ -49,13 +49,13 @@ class MainActivity : AppCompatActivity(), OnSwiped, OnDragged, OnSwipeToPerform 
         adapter.moveItem(fromPosition, toPosition)
     }
 
-    override fun swipeToDelete(adapterPosition: Int) {
-        Log.d("TAG!!!!", "swipeToDelete: ")
+    override fun swipeToDelete(adapterPosition: Int, swipeDirection: DIRECTION) {
+        Log.d("TAG!!!!", "swipeToDelete: $swipeDirection")
         adapter.removeItem(adapterPosition)
     }
 
-    override fun swipeToPerform(adapterPosition: Int) {
-        Log.d("TAG!!!!", "swipeToPerform: swiped")
+    override fun swipeToPerform(adapterPosition: Int, swipeDirection: DIRECTION) {
+        Log.d("TAG!!!!", "swipeToPerform: swiped $swipeDirection")
     }
 
 }

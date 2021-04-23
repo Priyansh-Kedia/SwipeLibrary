@@ -33,7 +33,13 @@ fun RecyclerView.addSwipeToPerform(
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            listener?.swipeToPerform(adapterPosition = viewHolder.adapterPosition)
+            val swipeDirection: DIRECTION = when(direction) {
+                ItemTouchHelper.UP -> DIRECTION.UP
+                ItemTouchHelper.DOWN -> DIRECTION.DOWN
+                ItemTouchHelper.LEFT -> DIRECTION.LEFT
+                else -> DIRECTION.RIGHT
+            }
+            listener?.swipeToPerform(adapterPosition = viewHolder.adapterPosition,swipeDirection = swipeDirection)
         }
 
         override fun onChildDraw(
@@ -75,5 +81,5 @@ fun RecyclerView.addSwipeToPerform(
 }
 
 interface OnSwipeToPerform {
-    fun swipeToPerform(adapterPosition: Int)
+    fun swipeToPerform(adapterPosition: Int, swipeDirection: DIRECTION)
 }
