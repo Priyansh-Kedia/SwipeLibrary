@@ -48,8 +48,9 @@ If no value is passed for the list, by default, **RIGHT** is the direction for s
 **Implementation of interface method**
 In a notes app, if you wish to delete the note from your database, after it is swiped, then you can used this method to perform the action. The note can be deleted by getting the *NOTE* using the adapter position inside the list passed to RecyclerView Adapter.
 
-        override fun swipeToDelete(adapterPosition: Int) {  
+        override fun swipeToDelete(adapterPosition: Int, swipeDirection: DIRECTION) {  
 		adapter.removeItem(adapterPosition)  
+                // swipeDirection gives the direction in which the item was swiped
 		}
 		
 > The third parameter is an optional parameter, for the Color integer, if the user wants a color in the background when the view is swiped out. This is how the user can pass the Color int as the parameter, `ContextCompat.getColor(this, R.color.colorAccent)`
@@ -121,8 +122,9 @@ If no value is passed for the list, by default, **RIGHT** is the direction for s
 **Implementation of interface method**
 In a notes app, if you wish to perform a task when a note is swiped, then you can used this method to perform the action. 
 
-        override fun swipeToPerform(adapterPosition: Int) {  
+        override fun swipeToPerform(adapterPosition: Int, swipeDirection: DIRECTION) {  
 			// Perform your task
+                        // swipeDirection gives the direction in which the item was swiped
 		}
 		
 > The third parameter is an optional parameter, for the Color integer, if the user wants a color in the background when the view is swiped out. This is how the user can pass the Color int as the parameter, `ContextCompat.getColor(this, R.color.colorAccent)`
